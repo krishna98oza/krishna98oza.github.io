@@ -22,3 +22,12 @@ resume.addEventListener("click", () => {
   window.open("https://drive.google.com/drive/u/3/folders/1fkJdx2FWop9rAZAXG8wAP3E5_a9QJ7Ly", "_blank");
 });
 
+// const listTag = document.querySelector(".list a");
+// const list = document.querySelector(".list");
+// listTag.addEventListener("click", ()=> {
+//   list.style.display = "none";
+// })
+const travelBuddy = document.querySelector(".travelBuddy");
+travelBuddy.addEventListener("click",()=>{
+  window.open("https://travelbuddyunique.netlify.app")
+})

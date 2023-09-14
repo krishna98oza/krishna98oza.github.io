@@ -1,39 +1,109 @@
+
+
 /* Reset some default styles */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+}
+html{
+  scroll-behavior:smooth;
+}
   
-  /* Apply a background color and font styles to the whole page */
+  /*Background color and font styles to the whole page */
   body {
     font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
+    background-color: #141414;
   }
   
   /* Style the navigation bar */
-  #nav-menu {
-    background-color: #1a1a1a;
-    padding: 10px 0;
-  }
-  
-  #nav-menu ul {
-    list-style: none;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@300;700&display=swap');
+
+
+.navbar {
+  background-color: #141414;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Adjust the z-index as needed */
+}
+
+.left h1 {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.checkBtn {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.checkBtn {
+    cursor: pointer;
+    font-size: 30px;
+    float: right;
+    color: #ed1e79;
+    line-height: 80px;
+}
+
+.right ul {
     display: flex;
-    justify-content: center;
-  }
-  
-  #nav-menu a {
-    color: white;
-    text-decoration: none;
+    list-style: none;
+}
+
+.right ul li a {
     padding: 10px 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  #nav-menu a:hover {
-    background-color: #555;
-    color: rgb(249, 99, 5);
-  }
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+.right ul li a:hover {
+    background-color: #fff;
+    border-radius: 7px;
+    color: rgb(22, 7, 36);
+}
+
+@media screen and (max-width:805px) {
+    .list {
+      width: 40%;
+      height: 100vh;
+      background-color: #141414;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 4rem;
+      left: 100%;
+      transition: all 1s;
+    }
+
+    #check {
+      display: none;
+    }
+
+    .checkBtn {
+      display: block;
+    }
+
+    #check:checked~ul {
+      left: 0%;
+    }
+
+}
   
   /* Style the home section */
   #mainHome{
@@ -47,9 +117,10 @@
   }
   
   .home-img {
-    width: 300px;
+    padding: 10px;
+    width: 320px;
     height: 320px;
-    background-color: #555;
+    background-color: #141414;
     border-radius: 50%;
     margin: 0 auto 20px;
   }
@@ -72,7 +143,7 @@
     white-space: nowrap;
     overflow: hidden;
     border-right:hidden;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
     color: white;
@@ -81,7 +152,7 @@
     /* border: 1px solid red; */
   }
   .typing::after {
-    content: "|";
+    content: " ";
     animation: blink-caret 0.5s step-end infinite;
   }
   
@@ -110,7 +181,6 @@
   }
 
 #resume-button-2 {
-  position: relative;
   display: inline-block;
   padding: 10px 20px;
   border: none;
@@ -136,8 +206,18 @@
   transform: scaleX(1);
   transition-delay: 0.2s;
 }
-  
-  /* Continue styling other sections in a similar way */
+
+  /* responsiveness code for home section */
+  @media screen and (max-width:805px) {
+    #mainHome{
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    #home {
+      height: 300px;
+    }
+   
+  }
   
   /* Style the skills section */
   #skills {
@@ -180,38 +260,50 @@
 
   /* Style the projects section */
   #projects {
+    /* border: 1px solid red; */
     background-color: white;
-    padding: 40px 0;
+    /* padding: 40px 0; */
     display: block;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 5%;  
+    padding: 3%;  
   }
   
   .project-card {
-    background-color: #3d3c3c;
+    /* border: 1px solid red; */
+    background-color: #2b2a2a;
     border-radius: 15px;
-    padding: 30px 12% ;
+    padding: 40px 8%;
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    height: 200px;
+    height: 250px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 10%;
+    gap: 15%;
     color: white;
   }
+
   .project-card .part-1{
-    border-radius: 50%;
     text-align: center;
-    padding: 20px;
-    transition: border-radius 0.8s ease-in-out;
+    /* padding: 10px; */
     line-height: 25px;
   }
-  .project-card .part-1:nth-child(3) p{
+  .project-card .part-2{
+    margin-top: 15px;
+    border-radius: 50%;
+    text-align: center;
+    /* padding: 20px; */
+    transition: border-radius 0.8s ease-in-out;
+  }
+  .project-card .part-3{
+    text-align: center;
+    padding: 20px;
+  }
+  .project-card .part-3 p{
     margin-bottom: 30px;
   }
-  .project-card .part-1:nth-child(3) a{
+  .project-card .part-3 a{
     padding: 5px;
     border-radius: 30px;
     color: white;
@@ -223,28 +315,57 @@
     -webkit-transition: .6s;
     color: rgb(237, 236, 236);
   }
-  .project-card .part-1:nth-child(3) a:hover{
+  .project-card .part-3 a:hover{
     color: black;
     box-shadow: inset 200px 0 0 0 #3472ef;
     transform: scaleX(1);
     transition-delay: 0.2s;
   }
-  .project-card .part-1 img {
-  max-width: 120%;
+  .project-card .part-2 img {
+  max-width: 130%;
   border-radius: 50%;
   transition: transform 0.5s ease-in-out;
   }
-  .project-card .part-1:hover {
-    border-radius: 0; /* Transition to square shape */
-    width: auto; /* Let the width adjust to the content */
+  /* .project-card .part-1:hover {
+    border-radius: 0; 
+    width: auto; 
     transform: scale(1.1);
-  }
+  } */
   
-  .project-card .part-1 img:hover {
+  .project-card .part-2 img:hover {
     border-radius: 0;
     transform: scale(1.5); /* Slightly enlarge the image on hover */
   }
-  
+  /* Responsivness code for projects */
+  @media screen and (max-width:1450px){
+    .project-card .part-3 a{
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (max-width:1060px) {
+    .project-card{
+      height: 420px;
+      transition: all 1s;
+      grid-template-columns: repeat(1,1fr);
+      gap: 10px;
+      padding: 20px 5%;
+    }
+    .project-card .part-2 img {
+      max-width: 50%;
+      border-radius: 5%;
+      transition: transform 0.5s ease-in-out;
+      }
+      .project-card .part-3 a{
+        display:inline-block ;
+        margin-left: 10px;
+        width: 200px;
+        margin-bottom: 10px;
+      }
+      .project-card .part-3 p{
+        margin-bottom: 10px;
+      }
+  }
   /* Style the contact section */
   #contact {
     background-color: #333;
@@ -263,15 +384,7 @@
   
   #contact a {
     color: white;
-  }
-  
-  /* Style the footer */
-  footer {
-    background-color: #f5f5f5;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
+  }  
   
 /* .react-activity-calendar { */
     /* Style the GitHub activity calendar */
@@ -286,3 +399,10 @@
     max-width: 100%;
     margin: 20px auto;
   }
+
+    /* Style the footer */
+    footer {
+      background-color: #141414;
+      /* padding: 20px 0; */
+      text-align: center;
+    }
