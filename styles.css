@@ -228,6 +228,7 @@ html{
   
   #skills>h3{
     display: block;
+    color: black;
     width: 100%;
     margin-bottom: 10px;
     text-align: center;
