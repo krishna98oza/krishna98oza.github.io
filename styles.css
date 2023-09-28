@@ -384,10 +384,14 @@ html{
     color: white;
   }  
   
-/* .react-activity-calendar { */
-    /* Style the GitHub activity calendar */
-    /* Add any styling you want for the activity calendar */
-  /* } */
+.react-activity-calendar {
+   background-color: rgb(255, 255, 255);
+   width: 100%;
+   margin: auto;
+   align-items: center;
+   text-align: center;
+   color: black;
+  }
   
   #github-streak-stats,
   #github-top-langs,
