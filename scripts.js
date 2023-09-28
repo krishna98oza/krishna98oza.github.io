@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
   typeProfession();
 });
 
-let resume = document.getElementById('resume-button-2');
+let resume = document.getElementById('resume-button-1');
 resume.addEventListener("click", () => {
   window.open("https://drive.google.com/drive/u/3/folders/1fkJdx2FWop9rAZAXG8wAP3E5_a9QJ7Ly", "_blank");
 });

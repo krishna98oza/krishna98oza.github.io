@@ -177,7 +177,7 @@ html{
     margin-bottom: 20px;
   }
 
-#resume-button-2 {
+#resume-button-1 {
   display: inline-block;
   padding: 10px 20px;
   border: none;
@@ -197,7 +197,7 @@ html{
   color: rgb(237, 236, 236);
 }
 
-#resume-button-2:hover {
+#resume-button-1:hover {
   color: black;
   box-shadow: inset 200px 0 0 0 #3472ef;
   transform: scaleX(1);
