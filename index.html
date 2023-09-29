@@ -23,7 +23,7 @@
               <li><a class="nav-link skills" href="#skills">Skills</a></li>
               <li><a class="nav-link projects" href="#projects">Projects</a></li>
               <li><a class="nav-link contact" href="#contact">Contact</a></li>
-              <li><a class="nav-link resume1" id="resume-link-1" target="_blank" href="your_resume.pdf">Resume</a></li>
+              <li><a class="nav-link resume1" id="resume-link-1" target="_blank" href="https://drive.google.com/file/d/1vX0JHIkQYlH5KX3QBv7lFPTpCWJjHwWh/view?usp=drive_link">Resume</a></li>
           </ul>
       </div>
   </nav>
@@ -36,13 +36,12 @@
     <section id="about" class="about section">
       <h2 id="user-detail-name">About Krishna Oza</h2>
       <h2 class="profession"></h2>
-      <p id="user-detail-intro">Driven Java Backend Web Developer with expertise in Java and a strong foundation in web development. Completed a rigorous 1200+ hour web development course at Masai school, showcasing proficiency in building frontend and backend projects. Skilled in Java, RESTful APIs, database management, and object-oriented programming.</p>
-      <button class="nav-link resume" id="resume-button-1">Download Resume</button>
+      <p id="user-detail-intro">Passionate Java Backend Developer proficient in Java programming language and related frameworks. Completed a rigorous web development course, showcasing expertise in frontend and backend projects. Skilled in Java, RESTful APIs, and database management. Collaborative team player with strong problem-solving and communication skills. Stay updated with emerging technologies and optimize code for performance and scalability.</p>
+      <button class="nav-link resume" id="resume-button-1" onclick="downloadResume()">Download Resume</button>
+      
     </section>
   </div>
-  
 
-    
     <section id="skills">
       <h3>Tech Skills</h3>
       <div class="skills-card">
@@ -119,15 +118,15 @@
       </div>
       <div class="part-3">
         <p class="project-tech-stack">Tech stack used: Java, Hibernate, MySQL, Meven</p>
-        <a class="project-github-link" href="https://github.com/GaneshGourav/half-power-8229" target="_blank">GitHub Repo</a>
-        <a class="project-deployed-link" href="https://travelbuddyunique.netlify.app/index.html" target="_blank">View Project</a>
+        <a class="project-github-link" href="https://github.com/krishna98oza/handsome-hydrant-4081" target="_blank">GitHub Repo</a>
+        <a class="project-deployed-link" href="https://drive.google.com/file/d/13LgikcgzUHF7epQlskQx0ZUl7tqknYwI/view?usp=sharing" target="_blank">View Project</a>
       </div>
      
     </div>
 
     <div class="project-card">
       <div class="part-1">
-        <h3 class="project-title">Rapido Rides</h3>
+        <h3 class="project-title">Rent Car</h3>
         <p class="project-description">A website similar to Uber or Ola, this type of applications used to Booking of Ride in local city area.</p>
       </div>
       <div class="part-2">
@@ -135,13 +134,12 @@
       </div>
       <div class="part-3">
         <p class="project-tech-stack">Tech stack used: Java, Spring Boot, Mapping</p>
-        <a class="project-github-link" href="" target="_blank">GitHub Repo</a>
-        <a class="project-deployed-link" href="" target="_blank">View Project</a>
+        <a class="project-github-link" href="https://github.com/krishna98oza/shocking-grade-9442" target="_blank">GitHub Repo</a>
+        <a class="project-deployed-link" href="https://github.com/krishna98oza/shocking-grade-9442" target="_blank">View Project</a>
       </div>
      
     </div>
-
-     
+    
     </div>
     <!-- Repeat project cards for each project -->
   </section>
@@ -152,7 +150,7 @@
   </section>
 
   <footer>
-    <img id="github-streak-stats" src="[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=krish98oza)](https://github.com/DenverCoder1/github-readme-streak-stats)" alt="GitHub Streak Stats">
+    <img id="github-streak-stats" src="https://github-readme-streak-stats.herokuapp.com?user=krishna98oza&theme=dark" alt="GitHub Streak Stats">
     <img id="github-top-langs" src="https://camo.githubusercontent.com/0cfa74d74818084bbee6195402fb818d546e3432819b083c58e1849a017a3ef2/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67733f757365726e616d653d6b726973686e6139386f7a612673686f775f69636f6e733d74727565266c6f63616c653d656e266c61796f75743d636f6d70616374" alt="GitHub Top Languages">
     <img id="github-stats-card" src="https://camo.githubusercontent.com/397f643b38514c9e90b3c8c1129deabd0afe9d9e7e1e21afaa2ba976385ac2fa/68747470733a2f2f6769746875622d726561646d652d73747265616b2d73746174732e6865726f6b756170702e636f6d2f3f757365723d6b726973686e6139386f7a6126" alt="GitHub Stats Card">
 
@@ -167,5 +165,27 @@
   </footer>
 
   <script src="scripts.js"></script>
+  <script>
+    function downloadResume() {
+      // Create a hidden anchor element
+      var anchor = document.createElement('a');
+      anchor.style.display = 'none';
+      
+      // Set the download URL to your resume file
+      anchor.href = 'https://drive.google.com/uc?export=download&id=1vX0JHIkQYlH5KX3QBv7lFPTpCWJjHwWh';
+      
+      // Set the download attribute with the desired file name
+      anchor.download = 'your-resume.pdf';
+      
+      // Append the anchor to the document body
+      document.body.appendChild(anchor);
+      
+      // Trigger a click event on the anchor
+      anchor.click();
+      
+      // Clean up
+      document.body.removeChild(anchor);
+    }
+    </script>
 </body>
 </html>
