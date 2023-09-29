@@ -23,7 +23,7 @@
               <li><a class="nav-link skills" href="#skills">Skills</a></li>
               <li><a class="nav-link projects" href="#projects">Projects</a></li>
               <li><a class="nav-link contact" href="#contact">Contact</a></li>
-              <li><a class="nav-link resume1" id="resume-link-1" target="_blank" href="https://drive.google.com/file/d/1vX0JHIkQYlH5KX3QBv7lFPTpCWJjHwWh/view?usp=drive_link">Resume</a></li>
+              <li><a class="nav-link resume1" id="resume-link-1" target="_blank" href="./resorces/Krishna-Oza-Resume.pdf" download="" onclick="window.open('https://drive.google.com/file/d/1vX0JHIkQYlH5KX3QBv7lFPTpCWJjHwWh/view?usp=drive_link', '_blank')">Resume</a></li>
           </ul>
       </div>
   </nav>
@@ -37,8 +37,11 @@
       <h2 id="user-detail-name">About Krishna Oza</h2>
       <h2 class="profession"></h2>
       <p id="user-detail-intro">Passionate Java Backend Developer proficient in Java programming language and related frameworks. Completed a rigorous web development course, showcasing expertise in frontend and backend projects. Skilled in Java, RESTful APIs, and database management. Collaborative team player with strong problem-solving and communication skills. Stay updated with emerging technologies and optimize code for performance and scalability.</p>
-      <button class="nav-link resume" id="resume-button-1" onclick="downloadResume()">Download Resume</button>
-      
+      <p id="tech">Tech Tech tech tech</p>
+      <a href="./resorces/Krishna-Oza-Resume.pdf" download="" target="_blank" onclick="">
+        <button class="nav-link resume" id="resume-button-1" >Download Resume</button>
+      </a>
+      <!-- <button class="nav-link resume" id="resume-button-1" onclick="download()">Download Resume</button> -->
     </section>
   </div>
 
@@ -165,27 +168,7 @@
   </footer>
 
   <script src="scripts.js"></script>
-  <script>
-    function downloadResume() {
-      // Create a hidden anchor element
-      var anchor = document.createElement('a');
-      anchor.style.display = 'none';
-      
-      // Set the download URL to your resume file
-      anchor.href = 'https://drive.google.com/uc?export=download&id=1vX0JHIkQYlH5KX3QBv7lFPTpCWJjHwWh';
-      
-      // Set the download attribute with the desired file name
-      anchor.download = 'your-resume.pdf';
-      
-      // Append the anchor to the document body
-      document.body.appendChild(anchor);
-      
-      // Trigger a click event on the anchor
-      anchor.click();
-      
-      // Clean up
-      document.body.removeChild(anchor);
-    }
-    </script>
+  
+
 </body>
 </html>
