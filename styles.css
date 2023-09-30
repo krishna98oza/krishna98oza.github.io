@@ -59,13 +59,15 @@ html{
     list-style: none;
 }
 
-.right ul li a {
+.right ul li a , .right ul li button {
     padding: 10px 20px;
     font-size: 1.2rem;
     color: white;
     cursor: pointer;
     text-decoration: none;
     transition: all 1s;
+    background-color: #141414;
+    border: none;
 }
 
 .right ul li a:hover {
@@ -195,6 +197,9 @@ html{
   transition: .3s;
   -webkit-transition: .3s;
   color: rgb(237, 236, 236);
+}
+#resume-button-2 a{
+  text-decoration: none;
 }
 
 #resume-button-2:hover {
